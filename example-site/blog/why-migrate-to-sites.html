@@ -1,0 +1,98 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="" name="keywords" />
+<meta content="" name="description" />
+<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+<title>Search</title>
+<link href="../css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="../js/jquery-1.6.2.min.js" type="text/javascript" ></script>
+<script src="../js/jquery.xml2json.pack.js" type="text/javascript" ></script>
+<script src="../js/search-basic.js" type="text/javascript" ></script>
+</head>
+<body>
+<div id="wrapper">
+<div id="header">
+    <div id="logo">
+<h1><a href="#">2011 User Conference</a></h1>
+</div>
+    <div id="search">
+<form id="search-form" method="get">
+<fieldset><input id="search-text-box" name="s" size="15" type="text" /> <input id="search-submit" type="submit" value="Search" /></fieldset>
+</form>
+</div>
+</div>
+    <!-- end #header -->
+    <div id="menu">
+<ul>
+<li class="current_page_item"><a href="#">Home</a></li>
+<li><a href="index.html">Blog</a></li>
+<li><a href="../search/search-basic.html">Search Basic</a></li>
+<li><a href="../search/search-autocomplete.html">Search Autocomplete</a></li>
+</ul>
+</div>
+    <!-- end #menu -->
+    <div id="page">
+        <div id="content">
+            <div class="post" id="hidden-search-results">
+<div class="bg1">
+<div class="bg2">
+<div class="bg3">
+<h2 class="title">Search Results</h2>
+<div class="entry">
+<div id="search-results" ></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+            <div class="post"><div class="bg1"><div class="bg2"><div class="bg3"><h2 class="title">Why Migrate to Sites?</h2><div class="entry"><span>Tuesday, August 23rd, 2011 at 4:00pm</span>&#160;--&#160;<span>Charlie Holder</span> 
+<p>Although Cascade Server 6.x has been out for over a year now, we still get questions about migrating to Sites. Since the list of advantages to using Sites grows with each release, we wanted to share some reasons why we think Sites are the way to go.</p>
+<h4>Targets were Confusing</h4>
+<p>Before Cascade Server 5.0, Targets were used to organize content and define a "website." Targets were both a relational and functional entity that defined the scope of a "site." The scope began with a selected folder and included all of the assets beneath it. During the content development process, a Target was to be chosen for every Template that was created. And as a limitation, each Template could only be used by one "site." With the Sites model, the idea of a Base Folder that stores a Site's content is a much more logical asset than a generic folder asset. And by having an asset in the CMS that is specifically designed for tracking what Site an object belongs to, you are able to freely share more assets, like Templates, across different Sites without needing to create multiple copies.</p>
+<h4>Administration Area Asset Organization</h4>
+<p>Depending on the size of your deployment, the lists of Asset Factories, Configuration Sets, Metadata Sets, Data Definitions, Content Types, etc. might be a bit lengthy. Couple this with systems that are not using Content Types at all and your System Administrators could have a wealth of assets to wade through every time they log in. Sites afford you the ability to create certain assets inside of each Site when they don't apply to any other. Because Administration Area assets can be shared across Sites, you won't need to worry about duplicating every asset in every Site either.</p>
+<h4>Site-specific Publish Queue</h4>
+<p>With the release of Cascade Server 6.8, publishing was greatly improved -- the Publish Queue concurrently process two jobs per Site now. This means that each Site is able to publish two jobs at a time and the system as a whole can process jobs from multiple Sites at the same time.</p>
+<h4>Individual Recycle Bins</h4>
+<p>As a temporary holding area for deleted assets, the Recycle Bin helps prevent the loss of content. All Home Area assets (Pages, Files, Folders, Blocks, Formats, Templates, and Links) are sent to the Recycle Bin before being permanently deleted. The real benefit comes when you couple this with a user's abilities within the system. These abilities dictate which assets they can see in a particular Recycle Bin and even which Recycle Bin a user can interact with in general. Users only interact with content they manage and content in other Sites remains safe from accidental changes by unknowing parties.</p>
+<h4>Faster Database Queries</h4>
+<p>The application arguably performs better when you make queries to the database using "site Ids" instead of having to query across all data in the database. Quick and easy.</p>
+<h4>Site Roles</h4>
+<p>Users can have elevated permissions in one Site and more restricted permissions in another Site. This concept is much, MUCH harder to reproduce in the Global Area. Take the ability to "Modify the Content Type of pages" as an example. If a User has this ability, they have it for all assets in the Global Area, whether they work with each "site" or not. In Sites, you determine what Roles you want available on that specific Site and then choose which Groups inherit those abilities. Users now "Modify the Content Type of pages" only in Sites to which the Groups they belong to are assigned.</p>
+<h4>Simpler Access Rights</h4>
+<p>Sites offer another level of granularity as to how you would like to manage the Users within each Site. They are great for decentralized environments where you may have different people managing different areas and groups of users. Each Site's available Role and Group assignments are separate and customizable. Furthermore, assigning access to content through Groups and changing end-level user account access is faster and more easily managed.</p>
+<h4>Cross-Site Linking</h4>
+<p>Cascade Server provides users with a number of different ways to manage links in content. Managed links are tracked within the system so that one is updated automatically when the linked-to asset moves or changes names. In Cascade 6.2, it is possible to create links in content to assets existing on different Sites. This is particularly useful when linking between pages on different Sites or when linking to centrally managed support assets like CSS and Javascript files.</p>
+<p>This becomes impossible when you begin to publish assets that exist within the Global Area to different Destinations. Content that is contained within a Site has an extra element associated with it for tracking what Site the asset belongs to. This element is used in conjunction with publish information for each asset to allow Cascade Server to manage the links regardless of what server or domain the content is pushed to.</p>
+<p>In addition to being able to link to assets that are maintained in different Sites, it is now possible to link to a specific Page Configuration, even if that Page asset is published to a different Destination. The Web URL field grants you the ability to cross-link assets that are published to different domain names while still managing those assets within one Site.</p>
+<h4>Connectors</h4>
+<p>This is an example of a Site-centric feature that is not available in the Global Area. Connectors are simply a means by which to (pardon the pun) "connect" third-party applications and tools with a Cascade Server instance. They allow users to take advantage of other applications, like WordPress, Facebook and Twitter, for pushing content that is managed within the system to external locations.</p>
+<p>As you can see from this short list, migrating content into Sites provides a variety of benefits to the system itself and to the users. I would love to talk more in depth, about any of these points as well as points I may not have listed here, to anyone that wants to continue the discussion.</p></div></div></div></div></div>
+        </div>
+        <!-- end #content -->
+        <div id="sidebar">
+<ul>
+<li>
+<h2>Menu</h2>
+<ul id="categories">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../search/search-basic.html">Search Basic</a></li>
+<li><a href="../search/search-autocomplete.html">Search Autocomplete</a></li>
+</ul>
+</li>
+</ul>
+</div>
+         <!-- end #sidebar -->
+        <div style="clear: both;" ></div>
+    </div>
+    <!-- end #page -->
+</div>
+<div id="footer-wrapper">
+    <div id="footer">
+<p>Copyright (c) 2011 Sitename.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a></p>
+</div>
+    <!-- end #footer -->
+</div>
+</body>
+</html>

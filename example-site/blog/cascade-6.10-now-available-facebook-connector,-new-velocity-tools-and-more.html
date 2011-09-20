@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="" name="keywords" />
+<meta content="" name="description" />
+<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+<title>Search</title>
+<link href="../css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="../js/jquery-1.6.2.min.js" type="text/javascript" ></script>
+<script src="../js/jquery.xml2json.pack.js" type="text/javascript" ></script>
+<script src="../js/search-basic.js" type="text/javascript" ></script>
+</head>
+<body>
+<div id="wrapper">
+<div id="header">
+    <div id="logo">
+<h1><a href="#">2011 User Conference</a></h1>
+</div>
+    <div id="search">
+<form id="search-form" method="get">
+<fieldset><input id="search-text-box" name="s" size="15" type="text" /> <input id="search-submit" type="submit" value="Search" /></fieldset>
+</form>
+</div>
+</div>
+    <!-- end #header -->
+    <div id="menu">
+<ul>
+<li class="current_page_item"><a href="#">Home</a></li>
+<li><a href="index.html">Blog</a></li>
+<li><a href="../search/search-basic.html">Search Basic</a></li>
+<li><a href="../search/search-autocomplete.html">Search Autocomplete</a></li>
+</ul>
+</div>
+    <!-- end #menu -->
+    <div id="page">
+        <div id="content">
+            <div class="post" id="hidden-search-results">
+<div class="bg1">
+<div class="bg2">
+<div class="bg3">
+<h2 class="title">Search Results</h2>
+<div class="entry">
+<div id="search-results" ></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+            <div class="post"><div class="bg1"><div class="bg2"><div class="bg3"><h2 class="title">Cascade 6.10 now available: Facebook Connector, new Velocity Tools and more</h2><div class="entry"><span>Thursday, August 11th, 2011 at 3:00pm</span>&#160;--&#160;<span>Bradley Wagner</span> 
+<h4>Overview</h4>
+<div><span id="internal-source-marker_0.8252136884257197">Last week, Hannon Hill released the latest version of its flagship WCM product</span>&#160;<a href="http://www.hannonhill.com/kb/Release-Notes/6.10/index.html#release-summary"><span>Cascade 6.10</span></a>&#160;<span>with features targeted at all 3 types of users in Cascade: content contributors (end-users), developers, and administrators. We&#8217;re proud to say this release satisfied</span>&#160;<a href="http://ideas.hannonhill.com/forums/52559-cascade-ideas/"><span>121 votes on our user Idea Exchange</span></a><span>! &#160;Highlights include:</span></div>
+<div>
+<ul>
+<li><span>a Facebook Connector</span></li>
+<li><span>new tools for Velocity developers</span></li>
+<li><span>a filter box to quickly locate Users, Groups, and Roles</span></li>
+<li><span>a handy feature for linking between assets published to different web servers</span></li>
+</ul>
+<span>Below you will find more in-depth information on a few of the exciting new features in this release. &#160;</span><br />
+<br />
+<h4 dir="ltr">Facebook</h4>
+<div><span>The</span>&#160;<a href="http://www.hannonhill.com/kb/Facebook-Connector/index.html"><span>Facebook Connector</span></a>&#160;<span>allows end-users to automatically share information about newly published content to a Facebook page. It is based on our</span>&#160;<a href="http://www.hannonhill.com/kb/Twitter-Connector/index.html"><span>Twitter Connector</span></a>&#160;<span>-- initially</span>&#160;<a href="http://www.hannonhill.com/kb/Release-Notes/6.4/index.html#available-connector-types-in-64"><span>released in 6.4</span></a>&#160;<span>-- and is part of our continued effort to leverage popular Social Media tools to engage your audience through a variety of channels.</span></div>
+<div><span><br />
+</span></div>
+<div><img alt="Cascade Facebook Post" height="429" src="http://hannonhill.com/news/blog/2011/cascade-facebook-post.png" width="597" /><br />
+<br />
+<h4 dir="ltr"><span>Increase your Velocity!</span></h4>
+<span>&#160;</span><br />
+<span>For Cascade developers, we&#8217;ve upgraded</span>&#160;<a href="http://velocity.apache.org/engine/"><span>our Velocity engine</span></a>&#160;<span>to version 1.7 and added a number of new tools for developers including:</span><br />
+<ul>
+<li><span><a href="http://www.hannonhill.com/kb/Script-Formats/index.html#escape-tool">Escape Tool</a></span></li>
+<li><span><a href="http://www.hannonhill.com/kb/Script-Formats/index.html#math-tool">Math Tool</a></span></li>
+<li><span><a href="http://www.hannonhill.com/kb/Script-Formats/index.html#display-tool">Display Tool</a></span></li>
+<li><span><a href="http://www.hannonhill.com/kb/Script-Formats/index.html#number-tool">Number Tool</a></span></li>
+</ul>
+<span>The goal is to allow developers to do more with less code. Here&#8217;s great example of how the Display Tool&#8217;s list() function can aid developers in outputting list or array contents more easily.</span><br />
+<span>&#160;</span><br />
+<span>Before 6.10:</span><span>&#160;</span><br />
+<span>&#160;</span><br />
+<span>#set ($links = [&#8220;link1&#8221;, &#8220;link2&#8221;, &#8220;link3&#8221;])</span><br />
+<span>#foreach ($link in $links)</span><br />
+<span>#if ($velocityCount == $links.size)</span><br />
+<span>$link</span><br />
+<span>#else</span><br />
+<span>$link |</span><br />
+<span>#end</span><br />
+<span>#end</span><span>&#160;</span><br />
+<span>&#160;</span><br />
+<span>In 6.10:</span><br />
+<span>&#160;</span><br />
+<span>#set ($links = [&#8220;link1&#8221;, &#8220;link2&#8221;, &#8220;link3&#8221;])</span><br />
+<span>$_DisplayTool.list($links, &#8220; | &#8221;)</span><br />
+<span>&#160;</span><br />
+<span>Other notable improvements to Velocity include:</span> 
+<ul>
+<li><span>Support for #break directives inside of #foreach loops</span></li>
+<li><span>Ability to treat arrays as Lists</span></li>
+<li><span>Better support for variable scoping inside of #foreach loops and macros</span></li>
+<li><span>$foreach.count, $foreach.first, $foreach.last, $foreach.hasNext loop variables</span></li>
+</ul>
+<span>&#160;</span><br />
+<span>Check out our</span>&#160;<a href="http://www.hannonhill.com/kb/Script-Formats/index.html#velocity-example"><span>Script Formats documentation</span></a>&#160;<span>for examples of each of the new tools.</span><br />
+<span>&#160;</span><br />
+<span>Also, join us for our</span>&#160;<a href="http://goo.gl/mzyHw"><span>upcoming Velocity webinar</span></a>&#160;<span>this Tuesday to learn more about the improvements available in 6.10.</span><br />
+<br />
+<h4 dir="ltr"><span>Locate Users, Groups, and Roles faster</span></h4>
+<span>&#160;</span><br />
+<span>Administrator users let us know that</span>&#160;<a href="http://ideas.hannonhill.com/forums/52559-cascade-ideas/suggestions/679645-search-extension-for-users-and-groups?ref=title"><span>looking for Users, Groups, and Roles was becoming unwieldy</span></a>&#160;<span>with enough of them in the system. In 6.10, we added a filter box to the users, groups, and roles interface to allow you to locate these objects by name (or full name or email for users). We also added &#8220;Full Name&#8221; and &#8220;Email&#8221; columns to the Users table.</span><br />
+<br />
+<img alt="Users, Groups, and Roles Filtering" height="186" src="http://hannonhill.com/news/blog/2011/users-groups-roles-filter.png" width="597" /><br />
+<br />
+<h4 dir="ltr"><span>Destination Web URLs and Mobile Outputs</span></h4>
+<span>&#160;</span><br />
+<span>In Cascade 6.8, we added the ability to publish</span>&#160;<a href="http://www.hannonhill.com/kb/Release-Notes/6.8/index.html#content-types-page-configuration-to-destination-mappings"><span>page configurations to specific Destinations</span></a><span>. This allowed users to publish their mobile page output, for example, to a different web server than their regular HTML page output. In 6.10, we&#8217;ve added a Web URL property to Destinations to help link to page outputs published to different web servers and consequently, different URLs.</span><br />
+<span>&#160;</span><br />
+<span>Let&#8217;s take Hannon Hill&#8217;s own marketing Site as an example. It has the Site URL:</span>&#160;<span>http://hannonhill.com</span><span>. Our services team recently created a</span>&#160;<a href="http://m.hannonhill.com/"><span>mobile version of the Site</span></a>&#160;<span>that publishes to</span>&#160;<a href="http://m.hannonhill.com/"><span>http://m.hannonhill.com</span></a><span>. With 6.10, we can set the Destination Web URL for our mobile Destination to be</span>&#160;<span>http://m.hannonhill.com</span>&#160;<span>so that it overrides the Sites&#8217; base URL.<br />
+<br class="kix-line-break" />
+</span></div>
+<div ></div>
+<div ></div>
+<div><img alt="Destination Web URL property" height="331" src="http://hannonhill.com/news/blog/2011/destination-web-url.png" width="597" /><br />
+<span>&#160;</span><br />
+<span>That way, when we link to the mobile output of pages on our marketing, the link gets correctly written as http://m.hannonhill.com/&lt;path/to/page&gt;.html. Likewise, links from other Sites in Cascade to the mobile output of pages on the marketing site will use the Destination&#8217;s Web URL</span>&#160;<span>http://m.hannonhill.com</span>&#160;<span>instead of the Site URL.</span><br />
+<br />
+<h4 dir="ltr"><span>Other improvements</span></h4>
+<span>&#160;</span><br />
+<span>Other features include an upgrade to the syntax-highlighting file editor, an upgrade to the PDF engine, and support for Tomcat 6. Check out the</span>&#160;<a href="http://www.hannonhill.com/kb/Release-Notes/6.10/index.html#release-summary"><span>complete release summary</span></a>&#160;<span>on our Knowledge Base for more information.</span></div>
+</div></div></div></div></div></div>
+        </div>
+        <!-- end #content -->
+        <div id="sidebar">
+<ul>
+<li>
+<h2>Menu</h2>
+<ul id="categories">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../search/search-basic.html">Search Basic</a></li>
+<li><a href="../search/search-autocomplete.html">Search Autocomplete</a></li>
+</ul>
+</li>
+</ul>
+</div>
+         <!-- end #sidebar -->
+        <div style="clear: both;" ></div>
+    </div>
+    <!-- end #page -->
+</div>
+<div id="footer-wrapper">
+    <div id="footer">
+<p>Copyright (c) 2011 Sitename.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a></p>
+</div>
+    <!-- end #footer -->
+</div>
+</body>
+</html>

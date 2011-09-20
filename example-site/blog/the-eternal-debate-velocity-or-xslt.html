@@ -1,0 +1,109 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta content="" name="keywords" />
+<meta content="" name="description" />
+<meta content="text/html; charset=utf-8" http-equiv="content-type" />
+<title>Search</title>
+<link href="../css/style.css" media="screen" rel="stylesheet" type="text/css" />
+<script src="../js/jquery-1.6.2.min.js" type="text/javascript" ></script>
+<script src="../js/jquery.xml2json.pack.js" type="text/javascript" ></script>
+<script src="../js/search-basic.js" type="text/javascript" ></script>
+</head>
+<body>
+<div id="wrapper">
+<div id="header">
+    <div id="logo">
+<h1><a href="#">2011 User Conference</a></h1>
+</div>
+    <div id="search">
+<form id="search-form" method="get">
+<fieldset><input id="search-text-box" name="s" size="15" type="text" /> <input id="search-submit" type="submit" value="Search" /></fieldset>
+</form>
+</div>
+</div>
+    <!-- end #header -->
+    <div id="menu">
+<ul>
+<li class="current_page_item"><a href="#">Home</a></li>
+<li><a href="index.html">Blog</a></li>
+<li><a href="../search/search-basic.html">Search Basic</a></li>
+<li><a href="../search/search-autocomplete.html">Search Autocomplete</a></li>
+</ul>
+</div>
+    <!-- end #menu -->
+    <div id="page">
+        <div id="content">
+            <div class="post" id="hidden-search-results">
+<div class="bg1">
+<div class="bg2">
+<div class="bg3">
+<h2 class="title">Search Results</h2>
+<div class="entry">
+<div id="search-results" ></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+            <div class="post"><div class="bg1"><div class="bg2"><div class="bg3"><h2 class="title">The Eternal Debate: Velocity or XSLT</h2><div class="entry"><span>Wednesday, August 31st, 2011 at 4:00pm</span>&#160;--&#160;<span>Rahul Bhagnari</span> 
+<div>
+<p>With the recent release of&#160;<a href="http://www.hannonhill.com/kb/Release-Notes/6.10/index.html">Cascade Server 6.10</a>, we have added enhanced Velocity tools designed to make writing formats even easier and to provide maximum flexibility to our users. Check out some of the newly integrated tools:<a href="http://www.hannonhill.com/kb/Script-Formats/#display-tool">Display Tool</a>,&#160;<a href="http://www.hannonhill.com/kb/Script-Formats/#escape-tool">Escape Tool</a>,&#160;<a href="http://www.hannonhill.com/kb/Script-Formats/#math-tool">Math Tool</a>&#160;and&#160;<a href="http://www.hannonhill.com/kb/Script-Formats/#number-tool">Number Tool</a>, among others. We have found that Velocity&#8217;s similarities to PHP and JavaScript mean that it takes less than 30% of the time to create a format in Velocity as it does to create a traditional XSLT format. Plus, Velocity is easier to learn, easier to read, and easier to debug than XSLT. So, with all benefits of Velocity and the advances in its integration with Cascade CMS, we must address a frequently asked question&#8212;Velocity or XSLT?<br />
+<br />
+In the Cascade CMS stadium, which format reigns supreme? Let me go ahead and tell you the end first: Either one can do the job and do it well! Honestly. But there are some genuine benefits of each, which is why we are proud to support both.<br />
+<br />
+Let&#8217;s look at a few important categories to compare Velocity and XSLT:</p>
+<ul>
+<li>ROBUSTNESS: 
+<ul>
+<li>Velocity works without the Xalan JavaScript extensions for date functionality, such as start dates and end dates.</li>
+<li>XSLT stylesheets can be included within other XSLT stylesheets, including the ability to cross-Site share these formats.</li>
+<li>XSLT formats can be tested and created outside of Cascade Server.</li>
+</ul>
+</li>
+<li>INCLUSIVENESS: 
+<ul>
+<li>The Velocity engine continues to be updated with new tools cropping up all the time, which we incorporate into new versions of Cascade CMS as appropriate. Be sure to make any requests on our<a href="http://ideas.hannonhill.com/forums/52559-cascade-ideas">idea exchange</a>.</li>
+<li>XSLT was designed specifically to go through XML data and therefore it&#8217;s often a foolproof method when displaying your content.</li>
+<li>Including PHP and JavaScript code snippets in your Velocity stylesheet is as easy as reading this sentence!</li>
+</ul>
+</li>
+<li>GENERAL EASE: 
+<ul>
+<li>XSLT is an XML document and is designed to read XML data (exclusively) making it simple for clients to map their transformation from the XML content to how it should be output on the page.&#160;</li>
+<li>Velocity is often coded in a straightforward, linear way making it easier and clearer to &#8220;see&#8221; and understand your format. Despite the standardization of XSLT, it&#8217;s still pretty hard to troubleshoot and debug.</li>
+<li>Velocity looks startlingly similar to JavaScript and therefore isn&#8217;t much of a jump in logic for many people; this makes it much easier to learn.</li>
+</ul>
+</li>
+</ul>
+<p>Hannon Hill has pulled out all the stops in supporting Velocity because we think it offers superior benefits to our users over XSLT. Additionally, Velocity allows us to develop our own tools based on your needs. While we support traditional XSLT, we chose to support Velocity as well in order to provide a more intuitive, easy-to-learn-read-debug, and more efficient format. More tools and other types of transformations are already in the pipeline! If you have any requests, please contact us at&#160;<a href="mailto:support@hannonhill.com">support@hannonhill.com</a>&#160;or make your suggestions known on our&#160;<a href="http://help.hannonhill.com/">help forums</a>.&#160;</p>
+<p>In conclusion, there really is no battle between Velocity and XSLT at all because we want you to determine what works best for you and feel free to use both&#8212;even on the same page! We do and will continue to support both Velocity and XSLT so you have maximum flexibility within Cascade CMS.</p>
+<p>For more in-depth information, check out our&#160;<a href="http://www.hannonhill.com/news/conference/2010/videos/Velocity-vs-XSLT.html">2010 User Conference Presentation</a>&#160;on the topic featuring engineering all-star&#160;<a href="http://hannonhill.com/about-us/brent-arrington.html">Brent Arrington</a>. Check out the example.com and example.edu Sites to see various XSLT and Velocity examples. Some of these formats are also located at&#160;<a href="https://github.com/hannonhill">GitHub</a>, our main repository for various examples, tools and code.</p>
+</div></div></div></div></div></div>
+        </div>
+        <!-- end #content -->
+        <div id="sidebar">
+<ul>
+<li>
+<h2>Menu</h2>
+<ul id="categories">
+<li><a href="../index.html">Home</a></li>
+<li><a href="../search/search-basic.html">Search Basic</a></li>
+<li><a href="../search/search-autocomplete.html">Search Autocomplete</a></li>
+</ul>
+</li>
+</ul>
+</div>
+         <!-- end #sidebar -->
+        <div style="clear: both;" ></div>
+    </div>
+    <!-- end #page -->
+</div>
+<div id="footer-wrapper">
+    <div id="footer">
+<p>Copyright (c) 2011 Sitename.com. All rights reserved. Design by <a href="http://www.freecsstemplates.org/">Free CSS Templates</a></p>
+</div>
+    <!-- end #footer -->
+</div>
+</body>
+</html>
